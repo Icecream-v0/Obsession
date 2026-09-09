@@ -1,0 +1,157 @@
+<svg width="1000" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="header" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e94560;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff6b6b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1000" height="800" fill="#0f0f1a"/>
+  
+  <!-- Header -->
+  <rect width="1000" height="120" fill="url(#header)"/>
+  <text x="500" y="75" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#fff" text-anchor="middle">PLATFORM COMPATIBILITY</text>
+  
+  <!-- Grid headers -->
+  <rect x="50" y="150" width="200" height="50" fill="#1a1a2e" stroke="#333" stroke-width="1"/>
+  <text x="150" y="182" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Category</text>
+  
+  <rect x="250" y="150" width="200" height="50" fill="#1a1a2e" stroke="#333" stroke-width="1"/>
+  <text x="350" y="182" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Platform</text>
+  
+  <rect x="450" y="150" width="200" height="50" fill="#1a1a2e" stroke="#333" stroke-width="1"/>
+  <text x="550" y="182" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Plugin Type</text>
+  
+  <rect x="650" y="150" width="300" height="50" fill="#1a1a2e" stroke="#333" stroke-width="1"/>
+  <text x="800" y="182" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Installation Method</text>
+  
+  <!-- Row 1: AI Assistants -->
+  <rect x="50" y="200" width="200" height="150" fill="#1a1a2e" stroke="#333" stroke-width="1"/>
+  <text x="150" y="230" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">AI ASSISTANTS</text>
+  <text x="150" y="255" font-family="Arial, sans-serif" font-size="11" fill="#888" text-anchor="middle">(5 platforms)</text>
+  
+  <rect x="250" y="200" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="350" y="220" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">Claude Code</text>
+  <rect x="450" y="200" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="550" y="220" font-family="Arial, sans-serif" font-size="12" fill="#aaa" text-anchor="middle">Skill Module</text>
+  <rect x="650" y="200" width="300" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="800" y="220" font-family="Arial, sans-serif" font-size="11" fill="#aaa" text-anchor="middle">~/.claude/plugins/obsession-ai.mjs</text>
+  
+  <rect x="250" y="230" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="350" y="250" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">Cursor IDE</text>
+  <rect x="450" y="230" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="550" y="250" font-family="Arial, sans-serif" font-size="12" fill="#aaa" text-anchor="middle">Rules File</text>
+  <rect x="650" y="230" width="300" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="800" y="250" font-family="Arial, sans-serif" font-size="11" fill="#aaa" text-anchor="middle">.cursor/rules/obsession.mdc</text>
+  
+  <rect x="250" y="260" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="350" y="280" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">Windsurf/Codeium</text>
+  <rect x="450" y="260" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="550" y="280" font-family="Arial, sans-serif" font-size="12" fill="#aaa" text-anchor="middle">Cascade Rules</text>
+  <rect x="650" y="260" width="300" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="800" y="280" font-family="Arial, sans-serif" font-size="11" fill="#aaa" text-anchor="middle">.windsurf/rules/obsession.md</text>
+  
+  <rect x="250" y="290" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="350" y="310" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">GitHub Copilot</text>
+  <rect x="450" y="290" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="550" y="310" font-family="Arial, sans-serif" font-size="12" fill="#aaa" text-anchor="middle">Instructions</text>
+  <rect x="650" y="290" width="300" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="800" y="310" font-family="Arial, sans-serif" font-size="11" fill="#aaa" text-anchor="middle">.github/copilot-instructions.md</text>
+  
+  <rect x="250" y="320" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="350" y="340" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">OpenCode</text>
+  <rect x="450" y="320" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="550" y="340" font-family="Arial, sans-serif" font-size="12" fill="#aaa" text-anchor="middle">System Prompt</text>
+  <rect x="650" y="320" width="300" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="800" y="340" font-family="Arial, sans-serif" font-size="11" fill="#aaa" text-anchor="middle">~/.opencode/obsession-ai.json</text>
+  
+  <!-- Row 2: Code Editors -->
+  <rect x="50" y="350" width="200" height="180" fill="#1a1a2e" stroke="#333" stroke-width="1"/>
+  <text x="150" y="380" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">CODE EDITORS</text>
+  <text x="150" y="405" font-family="Arial, sans-serif" font-size="11" fill="#888" text-anchor="middle">(5 platforms)</text>
+  
+  <rect x="250" y="350" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="350" y="370" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">VS Code</text>
+  <rect x="450" y="350" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="550" y="370" font-family="Arial, sans-serif" font-size="12" fill="#aaa" text-anchor="middle">Extension (.vsix)</text>
+  <rect x="650" y="350" width="300" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="800" y="370" font-family="Arial, sans-serif" font-size="11" fill="#aaa" text-anchor="middle">Marketplace or Install from VSIX</text>
+  
+  <rect x="250" y="380" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="350" y="400" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">JetBrains IDEs</text>
+  <rect x="450" y="380" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="550" y="400" font-family="Arial, sans-serif" font-size="12" fill="#aaa" text-anchor="middle">Plugin (.zip)</text>
+  <rect x="650" y="380" width="300" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="800" y="400" font-family="Arial, sans-serif" font-size="11" fill="#aaa" text-anchor="middle">Plugins Marketplace / From Disk</text>
+  
+  <rect x="250" y="410" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="350" y="430" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">Vim/Neovim</text>
+  <rect x="450" y="410" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="550" y="430" font-family="Arial, sans-serif" font-size="12" fill="#aaa" text-anchor="middle">Vim Plugin</text>
+  <rect x="650" y="410" width="300" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="800" y="430" font-family="Arial, sans-serif" font-size="11" fill="#aaa" text-anchor="middle">vim-plug: Plug 'obsession-ai'</text>
+  
+  <rect x="250" y="440" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="350" y="460" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">Emacs</text>
+  <rect x="450" y="440" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="550" y="460" font-family="Arial, sans-serif" font-size="12" fill="#aaa" text-anchor="middle">ELPA Package</text>
+  <rect x="650" y="440" width="300" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="800" y="460" font-family="Arial, sans-serif" font-size="11" fill="#aaa" text-anchor="middle">M-x package-install obsession-ai</text>
+  
+  <rect x="250" y="470" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="350" y="490" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">Zed Editor</text>
+  <rect x="450" y="470" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="550" y="490" font-family="Arial, sans-serif" font-size="12" fill="#aaa" text-anchor="middle">Config + Rules</text>
+  <rect x="650" y="470" width="300" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="800" y="490" font-family="Arial, sans-serif" font-size="11" fill="#aaa" text-anchor="middle">~/.config/zed/settings.json</text>
+  
+  <!-- Row 3: AI Extensions -->
+  <rect x="50" y="530" width="200" height="150" fill="#1a1a2e" stroke="#333" stroke-width="1"/>
+  <text x="150" y="560" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">AI EXTENSIONS</text>
+  <text x="150" y="585" font-family="Arial, sans-serif" font-size="11" fill="#888" text-anchor="middle">(5 platforms)</text>
+  
+  <rect x="250" y="530" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="350" y="550" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">Continue.dev</text>
+  <rect x="450" y="530" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="550" y="550" font-family="Arial, sans-serif" font-size="12" fill="#aaa" text-anchor="middle">Config Rule</text>
+  <rect x="650" y="530" width="300" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="800" y="550" font-family="Arial, sans-serif" font-size="11" fill="#aaa" text-anchor="middle">~/.continue/config.json rules</text>
+  
+  <rect x="250" y="560" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="350" y="580" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">Tabnine</text>
+  <rect x="450" y="560" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="550" y="580" font-family="Arial, sans-serif" font-size="12" fill="#aaa" text-anchor="middle">Custom Instructions</text>
+  <rect x="650" y="560" width="300" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="800" y="580" font-family="Arial, sans-serif" font-size="11" fill="#aaa" text-anchor="middle">Tabnine Settings → Custom Rules</text>
+  
+  <rect x="250" y="590" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="350" y="610" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">Sourcegraph Cody</text>
+  <rect x="450" y="590" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="550" y="610" font-family="Arial, sans-serif" font-size="12" fill="#aaa" text-anchor="middle">Context Rules</text>
+  <rect x="650" y="590" width="300" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="800" y="610" font-family="Arial, sans-serif" font-size="11" fill="#aaa" text-anchor="middle">.cody/rules/obsession.md</text>
+  
+  <rect x="250" y="620" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="350" y="640" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">Kimi AI</text>
+  <rect x="450" y="620" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="550" y="640" font-family="Arial, sans-serif" font-size="12" fill="#aaa" text-anchor="middle">Plugin JSON</text>
+  <rect x="650" y="620" width="300" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="800" y="640" font-family="Arial, sans-serif" font-size="11" fill="#aaa" text-anchor="middle">kimi.plugin.json in project root</text>
+  
+  <rect x="250" y="650" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="350" y="670" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">Qwen/Codex</text>
+  <rect x="450" y="650" width="200" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="550" y="670" font-family="Arial, sans-serif" font-size="12" fill="#aaa" text-anchor="middle">Extension Config</text>
+  <rect x="650" y="650" width="300" height="30" fill="#2a2a3e" stroke="#333" stroke-width="1"/>
+  <text x="800" y="670" font-family="Arial, sans-serif" font-size="11" fill="#aaa" text-anchor="middle">qwen-extension.json / .codex-plugin/</text>
+  
+  <!-- Footer stats -->
+  <rect x="50" y="700" width="900" height="80" rx="10" fill="url(#header)" stroke="#e94560" stroke-width="2"/>
+  <text x="500" y="730" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">TOTAL SUPPORT: 15+ PLATFORMS</text>
+  <text x="500" y="760" font-family="Arial, sans-serif" font-size="14" fill="#e94560" text-anchor="middle">3 Categories • Multiple Installation Methods • Universal Coverage</text>
+</svg>
