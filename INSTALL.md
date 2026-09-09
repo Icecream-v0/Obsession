@@ -6,7 +6,7 @@
 ### Install
 
 ```bash
-agy plugin install https://github.com/ayghri/i-have-adhd
+agy plugin install https://github.com/ayghri/obsession-ai
 ```
 
 ### Verify
@@ -18,17 +18,17 @@ agy plugin list
 ### Update
 
 ```bash
-agy plugin uninstall i-have-adhd
-agy plugin install https://github.com/ayghri/i-have-adhd
+agy plugin uninstall obsession-ai
+agy plugin install https://github.com/ayghri/obsession-ai
 ```
 
 ### Uninstall
 
 ```bash
-agy plugin uninstall i-have-adhd
+agy plugin uninstall obsession-ai
 ```
 
-Or keep it installed and turn it off: `agy plugin disable i-have-adhd`.
+Or keep it installed and turn it off: `agy plugin disable obsession-ai`.
 
 ### Always-on (optional)
 
@@ -61,11 +61,11 @@ Exceptions: explain fully when asked to explain. Confirm before destructive acti
 ### Install
 
 ```bash
-claude plugin marketplace add ayghri/i-have-adhd
-claude plugin install i-have-adhd@i-have-adhd
+claude plugin marketplace add ayghri/obsession-ai
+claude plugin install obsession-ai@obsession-ai
 ```
 
-Type `/i-have-adhd`.
+Type `/obsession-ai`.
 
 ### Verify
 
@@ -76,39 +76,39 @@ claude plugin list
 ### Update
 
 ```bash
-claude plugin marketplace update i-have-adhd
+claude plugin marketplace update obsession-ai
 ```
 
 ### Uninstall
 
 ```bash
-claude plugin uninstall i-have-adhd
-claude plugin marketplace remove i-have-adhd
+claude plugin uninstall obsession-ai
+claude plugin marketplace remove obsession-ai
 ```
 
-Or keep it installed and turn it off: `claude plugin disable i-have-adhd`.
+Or keep it installed and turn it off: `claude plugin disable obsession-ai`.
 
 ### Always-on (optional)
 
-A `SessionStart` hook loads the full ruleset at the start of every session, no `/i-have-adhd` needed:
+A `SessionStart` hook loads the full ruleset at the start of every session, no `/obsession-ai` needed:
 
 ```bash
-touch ~/.claude/.i-have-adhd-always
+touch ~/.claude/.obsession-ai-always
 ```
 
 If you use a custom Claude configuration directory, create the flag there instead:
 
 ```bash
-touch "$CLAUDE_CONFIG_DIR/.i-have-adhd-always"
+touch "$CLAUDE_CONFIG_DIR/.obsession-ai-always"
 ```
 
 Back to on-demand:
 
 ```bash
-rm ~/.claude/.i-have-adhd-always
+rm ~/.claude/.obsession-ai-always
 ```
 
-The hook only fires when the flag file exists, so installing the plugin changes nothing by itself. "stop adhd mode" still turns it off for the current session.
+The hook only fires when the flag file exists, so installing the plugin changes nothing by itself. "stop obsession mode" still turns it off for the current session.
 
 </details>
 
@@ -119,11 +119,11 @@ The hook only fires when the flag file exists, so installing the plugin changes 
 ### Install
 
 ```bash
-codex plugin marketplace add ayghri/i-have-adhd --ref main
-codex plugin add i-have-adhd@i-have-adhd
+codex plugin marketplace add ayghri/obsession-ai --ref main
+codex plugin add obsession-ai@obsession-ai
 ```
 
-Invoke the skill explicitly by typing `$i-have-adhd`. Codex will not activate
+Invoke the skill explicitly by typing `$obsession-ai`. Codex will not activate
 it automatically.
 
 ### Verify
@@ -135,16 +135,16 @@ codex plugin list
 ### Update
 
 ```bash
-codex plugin marketplace upgrade i-have-adhd
-codex plugin remove i-have-adhd
-codex plugin add i-have-adhd@i-have-adhd
+codex plugin marketplace upgrade obsession-ai
+codex plugin remove obsession-ai
+codex plugin add obsession-ai@obsession-ai
 ```
 
 ### Uninstall
 
 ```bash
-codex plugin remove i-have-adhd
-codex plugin marketplace remove i-have-adhd
+codex plugin remove obsession-ai
+codex plugin marketplace remove obsession-ai
 ```
 
 ### Always-on (optional)
@@ -181,16 +181,16 @@ Gemini CLI has no plugin marketplace, so there are two native routes: a **custom
 
 ```bash
 mkdir -p ~/.gemini/commands
-curl -fsSL https://raw.githubusercontent.com/ayghri/i-have-adhd/main/skills/i-have-adhd/agents/gemini.toml \
-  -o ~/.gemini/commands/i-have-adhd.toml
+curl -fsSL https://raw.githubusercontent.com/ayghri/obsession-ai/main/skills/obsession-ai/agents/gemini.toml \
+  -o ~/.gemini/commands/obsession-ai.toml
 ```
 
-Start a new session, type `/i-have-adhd`. It stays on for that session.
+Start a new session, type `/obsession-ai`. It stays on for that session.
 
 ### Install (extension, always-on)
 
 ```bash
-gemini extensions install https://github.com/ayghri/i-have-adhd
+gemini extensions install https://github.com/ayghri/obsession-ai
 ```
 
 The extension loads `GEMINI.md`, which imports the full skill, so the rules apply from message one. `git` must be installed.
@@ -199,23 +199,23 @@ The extension loads `GEMINI.md`, which imports the full skill, so the rules appl
 
 ```bash
 gemini extensions list          # extension route
-ls ~/.gemini/commands           # command route: i-have-adhd.toml present
+ls ~/.gemini/commands           # command route: obsession-ai.toml present
 ```
 
-Or type `/` in a session and confirm `i-have-adhd` is listed.
+Or type `/` in a session and confirm `obsession-ai` is listed.
 
 ### Update
 
 ```bash
-gemini extensions update i-have-adhd    # extension route
+gemini extensions update obsession-ai    # extension route
 # command route: re-run the curl above
 ```
 
 ### Uninstall
 
 ```bash
-gemini extensions uninstall i-have-adhd    # extension route
-rm ~/.gemini/commands/i-have-adhd.toml     # command route
+gemini extensions uninstall obsession-ai    # extension route
+rm ~/.gemini/commands/obsession-ai.toml     # command route
 ```
 
 </details>
@@ -228,21 +228,21 @@ Copilot reads Agent Skills natively: the same `SKILL.md`, no conversion. It scan
 ### Install
 
 ```bash
-npx skills add ayghri/i-have-adhd -a github-copilot        # this project
-npx skills add ayghri/i-have-adhd -a github-copilot -g     # all projects
+npx skills add ayghri/obsession-ai -a github-copilot        # this project
+npx skills add ayghri/obsession-ai -a github-copilot -g     # all projects
 ```
 
 Without the CLI, copy the skill folder into any directory Copilot scans:
 
 ```bash
-git clone https://github.com/ayghri/i-have-adhd
+git clone https://github.com/ayghri/obsession-ai
 mkdir -p ~/.copilot/skills
-cp -R i-have-adhd/skills/i-have-adhd ~/.copilot/skills/
+cp -R obsession-ai/skills/obsession-ai ~/.copilot/skills/
 ```
 
 ### Verify
 
-Type `/` in the chat input and confirm `i-have-adhd` appears. Or:
+Type `/` in the chat input and confirm `obsession-ai` appears. Or:
 
 ```bash
 npx skills list
@@ -252,7 +252,7 @@ npx skills ls -g    # if installed globally
 ### Update
 
 ```bash
-npx skills update i-have-adhd
+npx skills update obsession-ai
 ```
 
 Or re-copy the folder after `git pull`.
@@ -260,14 +260,14 @@ Or re-copy the folder after `git pull`.
 ### Uninstall
 
 ```bash
-npx skills remove i-have-adhd
+npx skills remove obsession-ai
 ```
 
-Or delete the `i-have-adhd` folder from the skills directory it landed in.
+Or delete the `obsession-ai` folder from the skills directory it landed in.
 
 ### Activation note
 
-Copilot respects `disable-model-invocation`: nothing applies until you invoke the skill, same as Claude Code (tested in [#60](https://github.com/ayghri/i-have-adhd/pull/60)).
+Copilot respects `disable-model-invocation`: nothing applies until you invoke the skill, same as Claude Code (tested in [#60](https://github.com/ayghri/obsession-ai/pull/60)).
 
 ### Always-on (optional)
 
@@ -301,17 +301,17 @@ Exceptions: explain fully when asked to explain. Confirm before destructive acti
 ### Install
 
 ```bash
-hermes skills install ayghri/i-have-adhd/skills/i-have-adhd
+hermes skills install ayghri/obsession-ai/skills/obsession-ai
 ```
 
-Type `/i-have-adhd`. The skill installs into `~/.hermes/skills/` and is exposed as a slash command at the next session start.
+Type `/obsession-ai`. The skill installs into `~/.hermes/skills/` and is exposed as a slash command at the next session start.
 
 Prefer to browse first? Add this repo as a skill source (a "tap"), then search and install:
 
 ```bash
-hermes skills tap add ayghri/i-have-adhd
-hermes skills search adhd
-hermes skills install ayghri/i-have-adhd/skills/i-have-adhd
+hermes skills tap add ayghri/obsession-ai
+hermes skills search obsession
+hermes skills install ayghri/obsession-ai/skills/obsession-ai
 ```
 
 ### Verify
@@ -323,16 +323,16 @@ hermes skills list
 ### Update
 
 ```bash
-hermes skills update i-have-adhd
+hermes skills update obsession-ai
 ```
 
 ### Uninstall
 
 ```bash
-hermes skills uninstall i-have-adhd
+hermes skills uninstall obsession-ai
 ```
 
-Or remove the tap too: `hermes skills tap remove ayghri/i-have-adhd`.
+Or remove the tap too: `hermes skills tap remove ayghri/obsession-ai`.
 
 ### Always-on (optional)
 
@@ -368,10 +368,10 @@ Start a Kimi Code session, then:
 
 1. Run `/plugins`.
 2. Choose **Custom**.
-3. Paste `https://github.com/ayghri/i-have-adhd` and press `Enter`.
+3. Paste `https://github.com/ayghri/obsession-ai` and press `Enter`.
 4. Choose **Trust and install**.
 
-Use slash command `/skill:i-have-adhd` to invoke the skill explicitly.
+Use slash command `/skill:obsession-ai` to invoke the skill explicitly.
 
 ### Update
 
@@ -387,20 +387,20 @@ Use slash command `/skill:i-have-adhd` to invoke the skill explicitly.
 <details>
 <summary><strong>OpenCode</strong></summary>
 
-OpenCode loads this repository as a server plugin: `.opencode/plugins/i-have-adhd.mjs` registers the `skills/` entry point and the `/i-have-adhd` command, and injects the ruleset when always-on is enabled. OpenCode also reads `skills/` natively, so the skill still works even without the plugin — the plugin adds the `/i-have-adhd` command and the always-on flag.
+OpenCode loads this repository as a server plugin: `.opencode/plugins/obsession-ai.mjs` registers the `skills/` entry point and the `/obsession-ai` command, and injects the ruleset when always-on is enabled. OpenCode also reads `skills/` natively, so the skill still works even without the plugin — the plugin adds the `/obsession-ai` command and the always-on flag.
 
 ### Install
 
 Clone the repo and point OpenCode at the plugin. An absolute path shares one checkout across every project:
 
 ```bash
-git clone https://github.com/ayghri/i-have-adhd ~/.config/opencode/vendor/i-have-adhd
+git clone https://github.com/ayghri/obsession-ai ~/.config/opencode/vendor/obsession-ai
 ```
 
 Add to your `opencode.json` (global: `~/.config/opencode/opencode.json`):
 
 ```json
-{ "plugin": ["/absolute/path/to/i-have-adhd/.opencode/plugins/i-have-adhd.mjs"] }
+{ "plugin": ["/absolute/path/to/obsession-ai/.opencode/plugins/obsession-ai.mjs"] }
 ```
 
 Or run OpenCode from the checkout — it ships a root `opencode.json` with the plugin already wired up.
@@ -408,19 +408,19 @@ Or run OpenCode from the checkout — it ships a root `opencode.json` with the p
 Start a new session and turn on ADHD-friendly output for the session:
 
 ```text
-/i-have-adhd
+/obsession-ai
 ```
 
-Rules stay on until `stop adhd mode` or `normal mode`.
+Rules stay on until `stop obsession mode` or `flow mode`.
 
 ### Verify
 
-Start OpenCode, type `/`, and confirm `i-have-adhd` appears in the command list.
+Start OpenCode, type `/`, and confirm `obsession-ai` appears in the command list.
 
 ### Update
 
 ```bash
-git -C ~/.config/opencode/vendor/i-have-adhd pull
+git -C ~/.config/opencode/vendor/obsession-ai pull
 ```
 
 ### Uninstall
@@ -430,13 +430,13 @@ Remove the `plugin` entry from `opencode.json`.
 ### Always-on (optional)
 
 ```bash
-touch ~/.config/opencode/.i-have-adhd-always
+touch ~/.config/opencode/.obsession-ai-always
 ```
 
-While the flag exists, the plugin appends the full ruleset to the system prompt every turn — the OpenCode equivalent of the Claude Code `SessionStart` hook. `stop adhd mode` or `normal mode` disables it for the current session; delete the flag to turn always-on off for good:
+While the flag exists, the plugin appends the full ruleset to the system prompt every turn — the OpenCode equivalent of the Claude Code `SessionStart` hook. `stop obsession mode` or `flow mode` disables it for the current session; delete the flag to turn always-on off for good:
 
 ```bash
-rm ~/.config/opencode/.i-have-adhd-always
+rm ~/.config/opencode/.obsession-ai-always
 ```
 
 </details>
@@ -450,21 +450,21 @@ Pi discovers this repository as a native package: `extensions/` provides the ses
 ### Install
 
 ```bash
-pi install https://github.com/ayghri/i-have-adhd
+pi install https://github.com/ayghri/obsession-ai
 ```
 
 Start a new Pi session. Toggle ADHD-friendly output for the current session:
 
 ```text
-/i-have-adhd
+/obsession-ai
 ```
 
 The footer shows `● ADHD ON` while the mode is active. Run the command again to turn it off, or be explicit:
 
 ```text
-/i-have-adhd on
-/i-have-adhd off
-stop adhd mode
+/obsession-ai on
+/obsession-ai off
+stop obsession mode
 ```
 
 Like the Claude Code hook, the extension adds the ruleset to the conversation once instead of rewriting the system prompt on every request, and adds it again after compaction drops it.
@@ -472,13 +472,13 @@ Like the Claude Code hook, the extension adds the ruleset to the conversation on
 The existing Agent Skills command remains available as an alias:
 
 ```text
-/skill:i-have-adhd
+/skill:obsession-ai
 ```
 
 Start a new Pi session with the mode enabled by default:
 
 ```bash
-pi --adhd
+pi --obsession
 ```
 
 ### Verify
@@ -487,12 +487,12 @@ pi --adhd
 pi list
 ```
 
-Confirm the GitHub package is listed, then type `/i-have-adhd` and check that `● ADHD ON` appears in the footer.
+Confirm the GitHub package is listed, then type `/obsession-ai` and check that `● ADHD ON` appears in the footer.
 
 ### Update
 
 ```bash
-pi update https://github.com/ayghri/i-have-adhd
+pi update https://github.com/ayghri/obsession-ai
 ```
 
 Or update every unpinned Pi package with `pi update --extensions`.
@@ -500,7 +500,7 @@ Or update every unpinned Pi package with `pi update --extensions`.
 ### Uninstall
 
 ```bash
-pi remove https://github.com/ayghri/i-have-adhd
+pi remove https://github.com/ayghri/obsession-ai
 ```
 
 ### Always-on (optional)
@@ -508,20 +508,20 @@ pi remove https://github.com/ayghri/i-have-adhd
 Create a flag in Pi's agent configuration directory:
 
 ```bash
-touch ~/.pi/agent/.i-have-adhd-always
+touch ~/.pi/agent/.obsession-ai-always
 ```
 
-The extension checks the flag at every new, resumed, forked, or reloaded session. A saved choice for the current session wins over this default, so `stop adhd mode` keeps that session disabled.
+The extension checks the flag at every new, resumed, forked, or reloaded session. A saved choice for the current session wins over this default, so `stop obsession mode` keeps that session disabled.
 
 Back to on-demand:
 
 ```bash
-rm ~/.pi/agent/.i-have-adhd-always
+rm ~/.pi/agent/.obsession-ai-always
 ```
 
 ### Config file (optional)
 
-Create `~/.pi/agent/i-have-adhd.json` in Pi's agent configuration directory:
+Create `~/.pi/agent/obsession-ai.json` in Pi's agent configuration directory:
 
 ```json
 {
@@ -530,12 +530,12 @@ Create `~/.pi/agent/i-have-adhd.json` in Pi's agent configuration directory:
 }
 ```
 
-- `alwaysOn`: start every session with the rules active — same as the `.i-have-adhd-always` flag file, which still works
-- `hideStatus`: keep the `● ADHD ON` status-bar entry hidden; the rules and the `/i-have-adhd` command still work
+- `alwaysOn`: start every session with the rules active — same as the `.obsession-ai-always` flag file, which still works
+- `hideStatus`: keep the `● ADHD ON` status-bar entry hidden; the rules and the `/obsession-ai` command still work
 
-Read once at extension startup, so restart Pi after changing it. A saved choice for the current session wins over `alwaysOn`, so `stop adhd mode` keeps that session disabled.
+Read once at extension startup, so restart Pi after changing it. A saved choice for the current session wins over `alwaysOn`, so `stop obsession mode` keeps that session disabled.
 
-If `PI_CODING_AGENT_DIR` is set, put `.i-have-adhd-always` in that directory instead. Run `/reload` or start a new session after changing the flag.
+If `PI_CODING_AGENT_DIR` is set, put `.obsession-ai-always` in that directory instead. Run `/reload` or start a new session after changing the flag.
 
 </details>
 
@@ -546,24 +546,24 @@ If `PI_CODING_AGENT_DIR` is set, put `.i-have-adhd-always` in that directory ins
 ### Install
 
 ```bash
-omp plugin marketplace add ayghri/i-have-adhd
-omp plugin install --scope user i-have-adhd@i-have-adhd
+omp plugin marketplace add ayghri/obsession-ai
+omp plugin install --scope user obsession-ai@obsession-ai
 ```
 
-Start a new OMP session and run `/i-have-adhd` to toggle the mode.
+Start a new OMP session and run `/obsession-ai` to toggle the mode.
 
 ### Update
 
 ```bash
-omp plugin marketplace update i-have-adhd
-omp plugin upgrade --scope user i-have-adhd@i-have-adhd
+omp plugin marketplace update obsession-ai
+omp plugin upgrade --scope user obsession-ai@obsession-ai
 ```
 
 ### Uninstall
 
 ```bash
-omp plugin uninstall --scope user i-have-adhd@i-have-adhd
-omp plugin marketplace remove i-have-adhd
+omp plugin uninstall --scope user obsession-ai@obsession-ai
+omp plugin marketplace remove obsession-ai
 ```
 
 </details>
@@ -575,13 +575,13 @@ omp plugin marketplace remove i-have-adhd
 ### Install
 
 ```bash
-qwen extensions install ayghri/i-have-adhd
+qwen extensions install ayghri/obsession-ai
 ```
 
 Qwen Code supports the GitHub shorthand and installs the repository as a
 native extension. The extension discovers the skill under `skills/`.
 
-Type `/i-have-adhd` to invoke the skill explicitly. Installing the extension
+Type `/obsession-ai` to invoke the skill explicitly. Installing the extension
 does not change output until the skill is invoked.
 
 ### Verify
@@ -596,18 +596,18 @@ Then start a new Qwen Code session and run:
 /skills
 ```
 
-Confirm that `i-have-adhd` appears in the list.
+Confirm that `obsession-ai` appears in the list.
 
 ### Update
 
 ```bash
-qwen extensions update i-have-adhd
+qwen extensions update obsession-ai
 ```
 
 ### Uninstall
 
 ```bash
-qwen extensions uninstall i-have-adhd
+qwen extensions uninstall obsession-ai
 ```
 
 </details>
@@ -622,21 +622,21 @@ Zed's Agent reads Agent Skills natively: the same `SKILL.md`, no conversion. (Ze
 In the Agent Panel, open the Skills manager and choose **Create skill from URL** (also in the command palette as `agent: create skill from url`), then paste:
 
 ```
-https://github.com/ayghri/i-have-adhd/blob/main/skills/i-have-adhd/SKILL.md
+https://github.com/ayghri/obsession-ai/blob/main/skills/obsession-ai/SKILL.md
 ```
 
-Save it in **User** scope for every project, or **Project** scope for one. Then type `/i-have-adhd` in the Agent Panel.
+Save it in **User** scope for every project, or **Project** scope for one. Then type `/obsession-ai` in the Agent Panel.
 
 Prefer the filesystem? Clone the repo and drop the skill folder into your user skills directory:
 
 ```bash
-git clone https://github.com/ayghri/i-have-adhd
-cp -R i-have-adhd/skills/i-have-adhd ~/.config/zed/skills/
+git clone https://github.com/ayghri/obsession-ai
+cp -R obsession-ai/skills/obsession-ai ~/.config/zed/skills/
 ```
 
 ### Verify
 
-Open the Skills manager in the Agent Panel and confirm `i-have-adhd` is listed. Or type `/` and confirm it appears.
+Open the Skills manager in the Agent Panel and confirm `obsession-ai` is listed. Or type `/` and confirm it appears.
 
 ### Update
 
@@ -644,7 +644,7 @@ Re-import from the same URL (overwrites), or re-copy the folder after `git pull`
 
 ### Uninstall
 
-Remove `i-have-adhd` from the Skills manager, or delete `~/.config/zed/skills/i-have-adhd`.
+Remove `obsession-ai` from the Skills manager, or delete `~/.config/zed/skills/obsession-ai`.
 
 ### Always-on (optional)
 
@@ -679,20 +679,20 @@ Works with any harness that reads agent skills. Swap `-a <agent>` for yours.
 ### Install
 
 ```bash
-npx skills add ayghri/i-have-adhd                  # this workspace
-npx skills add ayghri/i-have-adhd -g               # all projects
-npx skills add ayghri/i-have-adhd -a cursor -y     # one agent only
-npx skills add ayghri/i-have-adhd -a opencode -y
+npx skills add ayghri/obsession-ai                  # this workspace
+npx skills add ayghri/obsession-ai -g               # all projects
+npx skills add ayghri/obsession-ai -a cursor -y     # one agent only
+npx skills add ayghri/obsession-ai -a opencode -y
 ```
 
-New agent chat, type `/i-have-adhd`.
+New agent chat, type `/obsession-ai`.
 
 Without the CLI, copy the skill folder into whatever path your agent scans:
 
 ```bash
-git clone https://github.com/ayghri/i-have-adhd
+git clone https://github.com/ayghri/obsession-ai
 mkdir -p ~/.cursor/skills     # Cursor. Use .agents/skills for OpenCode, or your agent's own path
-cp -R i-have-adhd/skills/i-have-adhd ~/.cursor/skills/
+cp -R obsession-ai/skills/obsession-ai ~/.cursor/skills/
 ```
 
 ### Verify
@@ -705,15 +705,15 @@ npx skills ls -g    # if installed globally
 ### Update
 
 ```bash
-npx skills update i-have-adhd
+npx skills update obsession-ai
 npx skills update -g    # if installed globally
 ```
 
 ### Uninstall
 
 ```bash
-npx skills remove i-have-adhd
-npx skills remove i-have-adhd -g    # if installed globally
+npx skills remove obsession-ai
+npx skills remove obsession-ai -g    # if installed globally
 ```
 
 ### Always-on (optional)
@@ -744,32 +744,32 @@ Exceptions: explain fully when asked to explain. Confirm before destructive acti
 ## How activation works
 
 1. **Installed, not invoked.** In Claude Code, Qwen Code, and Codex, nothing happens until you invoke the skill explicitly. Claude Code and Qwen Code honor `disable-model-invocation: true` in `SKILL.md`; Codex honors `policy.allow_implicit_invocation: false` in `agents/openai.yaml`. Other harnesses may load every skill's description at startup and activate the skill themselves.
-2. **You invoke it explicitly.** Type `/i-have-adhd` in Claude Code or Qwen Code, or `$i-have-adhd` in Codex. Rules stay on for that session. "stop adhd mode" or "normal mode" turns them off.
-3. **You touch `~/.claude/.i-have-adhd-always`** (Claude Code). A `SessionStart` hook loads the full ruleset from message one, every session.
+2. **You invoke it explicitly.** Type `/obsession-ai` in Claude Code or Qwen Code, or `$obsession-ai` in Codex. Rules stay on for that session. "stop obsession mode" or "flow mode" turns them off.
+3. **You touch `~/.claude/.obsession-ai-always`** (Claude Code). A `SessionStart` hook loads the full ruleset from message one, every session.
 4. **You add the always-on snippet above** (other harnesses). Keeps the core rules in your agent's persistent context.
 
 In Claude Code, Qwen Code, and Codex, no middle ground: if you did not turn it on, it is off.
 
 ## Troubleshooting
 
-**`/i-have-adhd` not in autocomplete.** Restart the agent. The plugin index is read at startup.
+**`/obsession-ai` not in autocomplete.** Restart the agent. The plugin index is read at startup.
 
-**Always-on flag has no effect.** Update the plugin (`claude plugin marketplace update i-have-adhd`) and restart. Hooks are read at startup, and the flag needs the plugin version that ships `hooks/hooks.json`.
+**Always-on flag has no effect.** Update the plugin (`claude plugin marketplace update obsession-ai`) and restart. Hooks are read at startup, and the flag needs the plugin version that ships `hooks/hooks.json`.
 
 **`claude plugin marketplace add` fails.** Use the `owner/repo` form. A local path must point at the repo root, not `.claude-plugin/`.
 
-**Installed but replies still preamble.** Open a new session. If it still drifts, tighten the wording in `skills/i-have-adhd/SKILL.md`.
+**Installed but replies still preamble.** Open a new session. If it still drifts, tighten the wording in `skills/obsession-ai/SKILL.md`.
 
-**Want different rules.** Fork, edit `skills/i-have-adhd/SKILL.md`, then swap your copy in:
+**Want different rules.** Fork, edit `skills/obsession-ai/SKILL.md`, then swap your copy in:
 
 ```bash
-claude plugin uninstall i-have-adhd            # drop the upstream copy first:
-claude plugin marketplace remove i-have-adhd   # fork and upstream share both names
-claude plugin marketplace add <your-username>/i-have-adhd
-claude plugin install i-have-adhd@i-have-adhd
+claude plugin uninstall obsession-ai            # drop the upstream copy first:
+claude plugin marketplace remove obsession-ai   # fork and upstream share both names
+claude plugin marketplace add <your-username>/obsession-ai
+claude plugin install obsession-ai@obsession-ai
 ```
 
-Restart, then re-invoke `/i-have-adhd`.
+Restart, then re-invoke `/obsession-ai`.
 
 **Skill missing after `npx skills add`.** Start a new agent chat. Skills are indexed at session start. Confirm the folder landed where your agent scans (`~/.cursor/skills/` for Cursor, `.agents/skills/` for OpenCode) and that the frontmatter `name` matches the folder name.
 
@@ -780,8 +780,8 @@ Restart, then re-invoke `/i-have-adhd`.
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ayghri/i-have-adhd
-cd i-have-adhd/.vscode
+git clone https://github.com/ayghri/obsession-ai
+cd obsession-ai/.vscode
 npm install
 npm run compile
 ```
@@ -790,7 +790,7 @@ npm run compile
 ```bash
 npm install -g vsce
 vsce package
-code --install-extension i-have-adhd-1.0.0.vsix
+code --install-extension obsession-ai-1.0.0.vsix
 ```
 
 3. Or manually: Extensions → `...` → Install from VSIX
@@ -799,7 +799,7 @@ code --install-extension i-have-adhd-1.0.0.vsix
 
 - **Command Palette**: `Ctrl+Shift+P` → "I Have ADHD: Toggle"
 - **Status Bar**: Click the status indicator to toggle
-- **Always-On**: Enable in settings `"i-have-adhd.alwaysOn": true`
+- **Always-On**: Enable in settings `"obsession-ai.alwaysOn": true`
 
 ### Features
 
@@ -817,8 +817,8 @@ code --install-extension i-have-adhd-1.0.0.vsix
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ayghri/i-have-adhd
-cd i-have-adhd/.idea
+git clone https://github.com/ayghri/obsession-ai
+cd obsession-ai/.idea
 ```
 
 2. Build the plugin:
@@ -844,29 +844,29 @@ cd i-have-adhd/.idea
 
 Using vim-plug:
 ```vim
-Plug 'ayghri/i-have-adhd', { 'rtp': '.vim' }
+Plug 'ayghri/obsession-ai', { 'rtp': '.vim' }
 ```
 
 Using lazy.nvim:
 ```lua
 {
-  "ayghri/i-have-adhd",
+  "ayghri/obsession-ai",
   rtp = ".vim",
   config = function()
-    vim.g.adhd_mode_enabled = true
+    vim.g.obsession_mode_enabled = true
   end
 }
 ```
 
 Manual install:
 ```bash
-git clone https://github.com/ayghri/i-have-adhd
-cp i-have-adhd/.vim/adhd.vim ~/.vim/plugin/
+git clone https://github.com/ayghri/obsession-ai
+cp obsession-ai/.vim/obsession.vim ~/.vim/plugin/
 ```
 
 ### Usage
 
-- **Commands**: `:AdhdToggle`, `:AdhdEnable`, `:AdhdDisable`, `:AdhdRules`, `:AdhdCopy`
+- **Commands**: `:ObsessionToggle`, `:ObsessionEnable`, `:ObsessionDisable`, `:AdhdRules`, `:AdhdCopy`
 - **Keybinding**: `<Leader>aa` to toggle (configurable)
 - **Status Line**: Shows `[ADHD ON]` when active
 
@@ -879,29 +879,29 @@ cp i-have-adhd/.vim/adhd.vim ~/.vim/plugin/
 
 Using use-package:
 ```elisp
-(use-package i-have-adhd
-  :load-path "~/.emacs.d/i-have-adhd/.emacs"
-  :bind (("C-c a" . adhd-map))
+(use-package obsession-ai
+  :load-path "~/.emacs.d/obsession-ai/.emacs"
+  :bind (("C-c a" . obsession-map))
   :config
-  (adhd-global-mode 1))
+  (obsession-global-mode 1))
 ```
 
 Manual install:
 ```bash
-git clone https://github.com/ayghri/i-have-adhd
-cp i-have-adhd/.emacs/i-have-adhd.el ~/.emacs.d/
+git clone https://github.com/ayghri/obsession-ai
+cp obsession-ai/.emacs/obsession-ai.el ~/.emacs.d/
 ```
 
 Then add to `~/.emacs` or `init.el`:
 ```elisp
 (add-to-list 'load-path "~/.emacs.d/")
-(require 'i-have-adhd)
-(adhd-global-mode 1)
+(require 'obsession-ai)
+(obsession-global-mode 1)
 ```
 
 ### Usage
 
-- **Commands**: `M-x adhd-toggle`, `M-x adhd-enable`, `M-x adhd-disable`, `M-x adhd-show-rules`, `M-x adhd-copy-rules`
+- **Commands**: `M-x obsession-toggle`, `M-x obsession-enable`, `M-x obsession-disable`, `M-x obsession-show-rules`, `M-x obsession-copy-rules`
 - **Keybindings**: `C-c a t` (toggle), `C-c a e` (enable), `C-c a d` (disable), `C-c a r` (rules), `C-c a c` (copy)
 - **Mode Line**: Shows ` ADHD` when active
 
@@ -914,7 +914,7 @@ Then add to `~/.emacs` or `init.el`:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ayghri/i-have-adhd ~/.config/zed/i-have-adhd
+git clone https://github.com/ayghri/obsession-ai ~/.config/zed/obsession-ai
 ```
 
 2. Add to Zed settings (`settings.json`):
@@ -943,14 +943,14 @@ Add to Claude Desktop configuration (`claude_desktop_config.json`):
 ```json
 {
   "prompts": {
-    "adhd": "The reader has ADHD. Shape every response so it can be acted on:\n\n1. Lead with the answer or next action: command, path, or snippet first.\n2. Number multi-step work; one bounded action per step.\n3. End with one next action doable in under two minutes.\n4. Finish the current issue before raising a new one.\n5. Restate progress each turn (\"step 3 of 5 done\").\n6. Give time estimates in concrete units, never \"a bit\".\n7. After a change, show what now works.\n8. Errors: state location, cause, and fix. No drama.\n9. Cap lists at 5 items.\n10. No preamble, no recaps, no closers."
+    "obsession": "The reader has ADHD. Shape every response so it can be acted on:\n\n1. Lead with the answer or next action: command, path, or snippet first.\n2. Number multi-step work; one bounded action per step.\n3. End with one next action doable in under two minutes.\n4. Finish the current issue before raising a new one.\n5. Restate progress each turn (\"step 3 of 5 done\").\n6. Give time estimates in concrete units, never \"a bit\".\n7. After a change, show what now works.\n8. Errors: state location, cause, and fix. No drama.\n9. Cap lists at 5 items.\n10. No preamble, no recaps, no closers."
   }
 }
 ```
 
 ### Usage
 
-Start conversations with `/adhd` prompt or set as default system prompt.
+Start conversations with `/obsession` prompt or set as default system prompt.
 
 </details>
 
@@ -961,13 +961,13 @@ Start conversations with `/adhd` prompt or set as default system prompt.
 
 ```bash
 mkdir -p ~/.cursor/rules
-curl -fsSL https://raw.githubusercontent.com/ayghri/i-have-adhd/main/skills/i-have-adhd/SKILL.md \
-  -o ~/.cursor/rules/adhd.mdc
+curl -fsSL https://raw.githubusercontent.com/ayghri/obsession-ai/main/skills/obsession-ai/SKILL.md \
+  -o ~/.cursor/rules/obsession.mdc
 ```
 
 ### Install (Project)
 
-Add `.cursor/rules/adhd.mdc` to your project with the SKILL.md content.
+Add `.cursor/rules/obsession.mdc` to your project with the SKILL.md content.
 
 ### Always-On
 

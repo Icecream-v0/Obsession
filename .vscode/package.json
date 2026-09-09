@@ -1,5 +1,5 @@
 {
-  "name": "i-have-adhd",
+  "name": "obsession-ai",
   "displayName": "I Have ADHD - ADHD-Friendly AI Responses",
   "description": "Transforms AI coding assistant responses to be ADHD-friendly: action-first, numbered steps, concrete next actions, no fluff.",
   "version": "1.0.0",
@@ -16,17 +16,17 @@
   "contributes": {
     "commands": [
       {
-        "command": "i-have-adhd.toggle",
+        "command": "obsession-ai.toggle",
         "title": "Toggle ADHD-Friendly Mode",
         "category": "I Have ADHD"
       },
       {
-        "command": "i-have-adhd.enable",
+        "command": "obsession-ai.enable",
         "title": "Enable ADHD-Friendly Mode",
         "category": "I Have ADHD"
       },
       {
-        "command": "i-have-adhd.disable",
+        "command": "obsession-ai.disable",
         "title": "Disable ADHD-Friendly Mode",
         "category": "I Have ADHD"
       }
@@ -34,12 +34,12 @@
     "configuration": {
       "title": "I Have ADHD",
       "properties": {
-        "i-have-adhd.alwaysOn": {
+        "obsession-ai.alwaysOn": {
           "type": "boolean",
           "default": false,
           "description": "Always apply ADHD-friendly formatting rules to AI responses"
         },
-        "i-have-adhd.showStatus": {
+        "obsession-ai.showStatus": {
           "type": "boolean",
           "default": true,
           "description": "Show status indicator in status bar when ADHD mode is active"
@@ -54,7 +54,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ayghri/i-have-adhd.git"
+    "url": "https://github.com/ayghri/obsession-ai.git"
   },
   "license": "MIT"
 }

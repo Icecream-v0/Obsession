@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="./logo.png" alt="i-have-adhd" width="140" />
+  <img src="./logo.png" alt="obsession-ai" width="140" />
 </p>
 <p align="center">
-  <strong align="center">ADHD-friendly outputs. No ADHD diagnosis needed!</strong>
+  <strong align="center">Turn distraction into obsession. Hack your hyperfocus.</strong>
 </p>
 <p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/ayghri/i-have-adhd?style=flat" alt="License"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/ayghri/obsession-ai?style=flat" alt="License"></a>
 </p>
 
 <p align="center">
@@ -24,14 +24,14 @@
 Copy/paste into your CLI prompt:
 
 ```text
-Install the i-have-adhd skill/plugin from https://github.com/ayghri/i-have-adhd, refer to the repo's AGENTS.md for instructions.
+Install the obsession-ai skill/plugin from https://github.com/ayghri/obsession-ai, refer to the repo's AGENTS.md for instructions.
 ```
 
 Or 🔗 [check the installation instructions](INSTALL.md).
 
 ## What it does
 
-A skill for your coding assistant that stops it from burying the answer. Action first. Steps numbered. No "Hope this helps!"
+A skill for your coding assistant that channels hyperfocus. Action first. Steps numbered. Zero fluff. Flow state activated.
 
 
 ## What changes
@@ -66,7 +66,7 @@ A skill for your coding assistant that stops it from burying the answer. Action 
 
 ## The rules
 
-10 rules. Full text in [SKILL.md](./skills/i-have-adhd/SKILL.md).
+10 rules for hyperfocus mode. Full text in [SKILL.md](./skills/obsession-ai/SKILL.md).
 
 1. Lead with the next action.
 2. Number multi-step tasks.
@@ -81,16 +81,16 @@ A skill for your coding assistant that stops it from burying the answer. Action 
 
 ## Tune it
 
-Fork, edit `skills/i-have-adhd/SKILL.md`, then swap your copy in:
+Fork, edit `skills/obsession-ai/SKILL.md`, then swap your copy in:
 
 ```bash
-claude plugin uninstall i-have-adhd            # drop the upstream copy first:
-claude plugin marketplace remove i-have-adhd   # fork and upstream share both names
-claude plugin marketplace add <your-username>/i-have-adhd
-claude plugin install i-have-adhd@i-have-adhd
+claude plugin uninstall obsession-ai            # drop the upstream copy first:
+claude plugin marketplace remove obsession-ai   # fork and upstream share both names
+claude plugin marketplace add <your-username>/obsession-ai
+claude plugin install obsession-ai@obsession-ai
 ```
 
-Restart Claude Code, then re-invoke `/i-have-adhd`.
+Restart Claude Code, then re-invoke `/obsession-ai`.
 
 ## Credits
 
@@ -100,4 +100,4 @@ Loosely based on *The Adult ADHD Tool Kit* by J. Russell Ramsay and Anthony L. R
 
 MIT.
 
-Star ⭐ if it saved you one scroll past one "Great question!"
+Star ⭐ if it hacked your hyperfocus for one more shipping session.

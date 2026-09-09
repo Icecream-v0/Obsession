@@ -1,17 +1,4 @@
-# Logs and temp files
-*.log
-
-# Environment
-.env
-.env.local
-*.env.*
-
-# Editors
-.vscode/
-
-# Dependencies
-node_modules/
-
+```
 # Python
 __pycache__/
 *.pyc
@@ -21,6 +8,8 @@ __pycache__/
 env/
 venv/
 .venv/
+.ENV
+.python-version
 pip-log.txt
 pip-delete-this-directory.txt
 .tox/
@@ -31,157 +20,56 @@ nosetests.xml
 coverage.xml
 *.cover
 *.log
+*.tmp
+*.swp
+*.swo
 .DS_Store
 Thumbs.db
 
-# Build and distribution artifacts
-build/
-dist/
-*.egg
-*.egg-info/
-.eggs/
-eggs/
-parts/
-sdist/
-develop-eggs/
-.installed.cfg
-lib/
-lib64/
-area/
-**/*.egg-info/*
-**/*.egg
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp
+.pnp.js
+.pruntime
+.pruntime/*
+.pruntime/**
+*.tsbuildinfo
+next-env.d.ts
 
-# Testing
-.pytest_cache/
-.hypothesis/
-.coverage*
-htmlcov/
-.tox/
-.nox/
-coverage.xml
-*.cover
-*.log
+# Build outputs
+dist/
+build/
+.out/
+.bundle/
+*.bundle.js
+*.min.js
+*.map
+coverage/
+.nyc_output/
+istanbul/
+.eslintcache
 
 # IDE
+.vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# OS
-.DS_Store
-Thumbs.db
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# PyInstaller
-*.manifest
-*.spec
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-coverage.xml
-*.cover
-*.log
-
-# Translations
-*.mo
-*.pot
-
-# Django
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-
-# Flask
-instance/
-.webassets-cache
-
-# Scrapy
-.scrapy
-
-# Sphinx
-docs/_build/
-
-# PyBuilder
-target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# IPython
-profile_default/
-ipython_config.py
-
-# pyenv
-.python-version
-
-# pipenv
-Pipfile.lock
-
-# PEP 582
-__pypackages__/
-
-# Celery
-celerybeat-schedule
-celerybeat.pid
-
-# Sage
-*.sage.py
-
-# Environments
+# Environment variables
 .env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
+.env.local
+.env.*
+!.env.example
 
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
+# Testing
+.pytest_cache/
 .mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre
-.pyre/
-
-# Poetry
-poetry.lock
-__pypackages__/
-
-# FastAPI
-*.svg
+.hypothesis/
+cover/
 
 # Compressed files
 *.zip
@@ -203,25 +91,11 @@ __pypackages__/
 *.Z
 *.lz
 *.lzo
-*.tar
-*.tgz
-
-# GitHub
-.github/
-
-# VS Code
-.vscode/
-
-# JetBrains IDEs
-.idea/
 
 # Temporary files
 *.tmp
+*.temp
 *~
 .DS_Store
 Thumbs.db
-
-# Configuration specific to the project
-config/
-secrets/
-credentials/
+```

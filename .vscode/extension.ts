@@ -19,56 +19,56 @@ The reader has ADHD. Shape every response so it can be acted on:
 Exceptions: explain fully when asked to explain. Confirm before destructive actions. After three failed fixes, stop and name the doubtful assumption. If the request is ambiguous, ask one short question.
 `;
 
-let adhdModeActive = false;
+let obsessionModeActive = false;
 let statusBarItem: vscode.StatusBarItem;
 
 export function activate(context: vscode.ExtensionContext) {
     // Load saved state
-    const savedState = context.globalState.get<boolean>('adhdModeActive', false);
-    adhdModeActive = savedState;
+    const savedState = context.globalState.get<boolean>('obsessionModeActive', false);
+    obsessionModeActive = savedState;
 
     // Create status bar item
     statusBarItem = vscode.window.createStatusBarItem(
         vscode.StatusBarAlignment.Right,
         100
     );
-    statusBarItem.command = 'i-have-adhd.toggle';
+    statusBarItem.command = 'obsession-ai.toggle';
     context.subscriptions.push(statusBarItem);
 
     // Register commands
     context.subscriptions.push(
-        vscode.commands.registerCommand('i-have-adhd.toggle', toggleAdhdMode)
+        vscode.commands.registerCommand('obsession-ai.toggle', toggleAdhdMode)
     );
     context.subscriptions.push(
-        vscode.commands.registerCommand('i-have-adhd.enable', enableAdhdMode)
+        vscode.commands.registerCommand('obsession-ai.enable', enableAdhdMode)
     );
     context.subscriptions.push(
-        vscode.commands.registerCommand('i-have-adhd.disable', disableAdhdMode)
+        vscode.commands.registerCommand('obsession-ai.disable', disableAdhdMode)
     );
     context.subscriptions.push(
-        vscode.commands.registerCommand('i-have-adhd.copyRules', copyRulesToClipboard)
+        vscode.commands.registerCommand('obsession-ai.copyRules', copyRulesToClipboard)
     );
 
     // Update UI
     updateStatusBar();
 
     // Show info message on first activation
-    if (adhdModeActive) {
+    if (obsessionModeActive) {
         vscode.window.showInformationMessage('ADHD-friendly mode is enabled');
     }
 }
 
 function toggleAdhdMode() {
-    adhdModeActive = !adhdModeActive;
+    obsessionModeActive = !obsessionModeActive;
     updateStatusBar();
     
-    vscode.workspace.getConfiguration('i-have-adhd').update(
+    vscode.workspace.getConfiguration('obsession-ai').update(
         'alwaysOn',
-        adhdModeActive,
+        obsessionModeActive,
         vscode.ConfigurationTarget.Global
     );
 
-    const message = adhdModeActive 
+    const message = obsessionModeActive 
         ? 'ADHD-friendly mode enabled' 
         : 'ADHD-friendly mode disabled';
     
@@ -76,13 +76,13 @@ function toggleAdhdMode() {
 }
 
 function enableAdhdMode() {
-    if (!adhdModeActive) {
+    if (!obsessionModeActive) {
         toggleAdhdMode();
     }
 }
 
 function disableAdhdMode() {
-    if (adhdModeActive) {
+    if (obsessionModeActive) {
         toggleAdhdMode();
     }
 }
@@ -93,7 +93,7 @@ async function copyRulesToClipboard() {
 }
 
 function updateStatusBar() {
-    if (adhdModeActive) {
+    if (obsessionModeActive) {
         statusBarItem.text = '$(check-all) ADHD ON';
         statusBarItem.tooltip = 'ADHD-friendly mode is active. Click to toggle.';
         statusBarItem.backgroundColor = new vscode.ThemeColor('statusBarItem.prominentBackground');
@@ -103,7 +103,7 @@ function updateStatusBar() {
         statusBarItem.backgroundColor = undefined;
     }
     
-    const showStatus = vscode.workspace.getConfiguration('i-have-adhd').get('showStatus', true);
+    const showStatus = vscode.workspace.getConfiguration('obsession-ai').get('showStatus', true);
     if (showStatus) {
         statusBarItem.show();
     } else {

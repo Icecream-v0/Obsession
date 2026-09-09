@@ -53,7 +53,7 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`🚀 i-have-adhd website running at http://localhost:${PORT}`);
+  console.log(`🚀 obsession-ai website running at http://localhost:${PORT}`);
   console.log(`📦 Package version: 1.0.0`);
   console.log(`✨ ADHD-friendly coding assistant plugins for all editors`);
 });

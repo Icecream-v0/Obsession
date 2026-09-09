@@ -1,6 +1,6 @@
 {
-  "name": "i-have-adhd",
-  "version": "0.2.0",
-  "description": "Shape Gemini CLI output for an ADHD reader: lead with the next action, number steps, suppress tangents, restate state, make wins visible.",
+  "name": "obsession-ai",
+  "version": "2.0.0",
+  "description": "Turn distraction into obsession. Lead with action, number steps, suppress tangents, restate state, make wins visible.",
   "contextFileName": "GEMINI.md"
 }
