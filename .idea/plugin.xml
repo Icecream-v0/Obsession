@@ -1,0 +1,36 @@
+<idea-plugin>
+  <id>com.github.ayghri.i-have-adhd</id>
+  <name>I Have ADHD</name>
+  <version>1.0.0</version>
+  <vendor url="https://github.com/ayghri/i-have-adhd">ayghri</vendor>
+  
+  <description><![CDATA[
+    Transform AI coding assistant responses to be ADHD-friendly:
+    <ul>
+      <li>Action-first responses with commands and code snippets first</li>
+      <li>Numbered steps for multi-step tasks</li>
+      <li>Concrete next actions doable in under 2 minutes</li>
+      <li>No preamble, recaps, or closing pleasantries</li>
+      <li>Status bar indicator when active</li>
+    </ul>
+    
+    Works with GitHub Copilot, Cursor, and other AI assistants in JetBrains IDEs.
+  ]]></description>
+  
+  <depends>com.intellij.modules.platform</depends>
+  
+  <actions>
+    <action id="IHaveAdhd.Toggle" 
+            class="com.github.ayghri.adhd.ToggleAdhdAction"
+            text="Toggle ADHD-Friendly Mode"
+            description="Enable or disable ADHD-friendly output formatting">
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt A"/>
+    </action>
+  </actions>
+  
+  <extensions defaultExtensionNs="com.intellij">
+    <applicationService serviceImplementation="com.github.ayghri.adhd.AdhdSettings"/>
+    <statusBarWidgetFactory implementation="com.github.ayghri.adhd.AdhdStatusBarWidgetFactory"/>
+  </extensions>
+</idea-plugin>
