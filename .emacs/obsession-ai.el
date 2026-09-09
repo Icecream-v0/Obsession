@@ -1,11 +1,11 @@
-;;; i-have-adhd.el --- ADHD-friendly AI responses -*- lexical-binding: t; -*-
+;;; obsession-ai.el --- ADHD-friendly AI responses -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2024 ayghri
 ;; Author: ayghri
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "27.1"))
 ;; License: MIT
-;; Keywords: convenience, ai, adhd
+;; Keywords: convenience, ai, obsession
 
 ;;; Commentary:
 ;; Transform AI coding assistant responses to be ADHD-friendly:
@@ -16,22 +16,22 @@
 
 ;;; Code:
 
-(defgroup i-have-adhd nil
+(defgroup obsession-ai nil
   "ADHD-friendly AI response formatting."
   :group 'convenience
-  :prefix "adhd-")
+  :prefix "obsession-")
 
-(defcustom adhd-mode-enabled nil
+(defcustom obsession-mode-enabled nil
   "Whether ADHD-friendly mode is enabled."
   :type 'boolean
-  :group 'i-have-adhd)
+  :group 'obsession-ai)
 
-(defcustom adhd-show-modeline-indicator t
+(defcustom obsession-show-modeline-indicator t
   "Show indicator in mode line when ADHD mode is active."
   :type 'boolean
-  :group 'i-have-adhd)
+  :group 'obsession-ai)
 
-(defvar adhd-rules
+(defvar obsession-rules
   "## Output style
 
 The reader has ADHD. Shape every response so it can be acted on:
@@ -48,70 +48,70 @@ The reader has ADHD. Shape every response so it can be acted on:
 10. No preamble, no recaps, no closers."
   "The ADHD-friendly output rules.")
 
-(defun adhd-toggle ()
+(defun obsession-toggle ()
   "Toggle ADHD-friendly mode."
   (interactive)
-  (setq adhd-mode-enabled (not adhd-mode-enabled))
-  (if adhd-mode-enabled
+  (setq obsession-mode-enabled (not obsession-mode-enabled))
+  (if obsession-mode-enabled
       (message "ADHD-friendly mode ENABLED")
     (message "ADHD-friendly mode DISABLED"))
-  (when adhd-show-modeline-indicator
+  (when obsession-show-modeline-indicator
     (force-mode-line-update)))
 
-(defun adhd-enable ()
+(defun obsession-enable ()
   "Enable ADHD-friendly mode."
   (interactive)
-  (setq adhd-mode-enabled t)
+  (setq obsession-mode-enabled t)
   (message "ADHD-friendly mode ENABLED"))
 
-(defun adhd-disable ()
+(defun obsession-disable ()
   "Disable ADHD-friendly mode."
   (interactive)
-  (setq adhd-mode-enabled nil)
+  (setq obsession-mode-enabled nil)
   (message "ADHD-friendly mode DISABLED"))
 
-(defun adhd-show-rules ()
+(defun obsession-show-rules ()
   "Display ADHD-friendly rules in a buffer."
   (interactive)
   (with-help-window "*ADHD Rules*"
-    (princ adhd-rules)))
+    (princ obsession-rules)))
 
-(defun adhd-copy-rules ()
+(defun obsession-copy-rules ()
   "Copy ADHD-friendly rules to kill ring."
   (interactive)
-  (kill-new adhd-rules)
+  (kill-new obsession-rules)
   (message "ADHD rules copied to kill ring"))
 
-(defun adhd-mode-line-format ()
+(defun obsession-mode-line-format ()
   "Return mode line format for ADHD mode."
-  (if (and adhd-mode-enabled adhd-show-modeline-indicator)
-      '(:eval (if adhd-mode-enabled " [ADHD ON]" ""))
+  (if (and obsession-mode-enabled obsession-show-modeline-indicator)
+      '(:eval (if obsession-mode-enabled " [ADHD ON]" ""))
     ""))
 
-(add-to-list 'global-mode-string '(:eval (adhd-mode-line-format)))
+(add-to-list 'global-mode-string '(:eval (obsession-mode-line-format)))
 
 ;;;###autoload
-(define-minor-mode adhd-global-mode
+(define-minor-mode obsession-global-mode
   "Global minor mode for ADHD-friendly AI responses."
   :global t
   :lighter " ADHD"
-  :group 'i-have-adhd
-  (if adhd-global-mode
+  :group 'obsession-ai
+  (if obsession-global-mode
       (progn
-        (setq adhd-mode-enabled t)
+        (setq obsession-mode-enabled t)
         (message "ADHD-friendly mode ENABLED"))
-    (setq adhd-mode-enabled nil)
+    (setq obsession-mode-enabled nil)
     (message "ADHD-friendly mode DISABLED")))
 
 ;; Key bindings
-(define-prefix-command 'adhd-map)
-(global-set-key (kbd "C-c a") 'adhd-map)
-(define-key adhd-map (kbd "t") #'adhd-toggle)
-(define-key adhd-map (kbd "e") #'adhd-enable)
-(define-key adhd-map (kbd "d") #'adhd-disable)
-(define-key adhd-map (kbd "r") #'adhd-show-rules)
-(define-key adhd-map (kbd "c") #'adhd-copy-rules)
+(define-prefix-command 'obsession-map)
+(global-set-key (kbd "C-c a") 'obsession-map)
+(define-key obsession-map (kbd "t") #'obsession-toggle)
+(define-key obsession-map (kbd "e") #'obsession-enable)
+(define-key obsession-map (kbd "d") #'obsession-disable)
+(define-key obsession-map (kbd "r") #'obsession-show-rules)
+(define-key obsession-map (kbd "c") #'obsession-copy-rules)
 
-(provide 'i-have-adhd)
+(provide 'obsession-ai)
 
-;;; i-have-adhd.el ends here
+;;; obsession-ai.el ends here

@@ -1,12 +1,12 @@
 {
-  "name": "i-have-adhd",
-  "version": "1.0.0",
-  "description": "Shape output for a reader with ADHD: lead with the next action, number multi-step work, restate state across turns, suppress tangents, give specific time estimates, make wins visible.",
+  "name": "obsession-ai",
+  "version": "2.0.0",
+  "description": "Turn distraction into obsession. The AI coding assistant that hacks your hyperfocus.",
   "license": "MIT",
-  "homepage": "https://github.com/ayghri/i-have-adhd",
-  "main": "extensions/i-have-adhd.ts",
+  "homepage": "https://github.com/ayghri/obsession-ai",
+  "main": "extensions/obsession-ai.ts",
   "bin": {
-    "i-have-adhd": "./scripts/cli.js"
+    "obsession-ai": "./scripts/cli.js"
   },
   "files": [
     "extensions/",
@@ -30,22 +30,22 @@
   ],
   "scripts": {
     "test": "python -m pytest tests/ -v",
-    "build": "echo 'Building i-have-adhd package...'",
+    "build": "echo 'Building obsession-ai package...'",
     "start": "node scripts/server.js",
     "deploy": "npm run build && npm publish",
     "website": "node scripts/website.js"
   },
-  "keywords": ["pi-package", "adhd", "coding-assistant", "productivity", "vscode-extension", "jetbrains-plugin", "vim-plugin", "emacs-package"],
+  "keywords": ["pi-package", "obsession", "hyperfocus", "flow-state", "coding-assistant", "productivity", "vscode-extension", "jetbrains-plugin", "vim-plugin", "emacs-package"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ayghri/i-have-adhd.git"
+    "url": "https://github.com/ayghri/obsession-ai.git"
   },
-  "author": "ayghri",
+  "author": "OBsession Team",
   "omp": {
-    "extensions": ["./extensions/i-have-adhd.ts"]
+    "extensions": ["./extensions/obsession-ai.ts"]
   },
   "pi": {
-    "extensions": ["./extensions/i-have-adhd.ts"],
+    "extensions": ["./extensions/obsession-ai.ts"],
     "skills": ["./skills"]
   }
 }

@@ -15,13 +15,13 @@ Transforms AI coding assistant (Copilot, Cursor, etc.) responses to be ADHD-frie
 
 1. Download this folder or clone the repository
 2. In VS Code: `Extensions` → `...` → `Install from VSIX...`
-3. Or run: `code --install-extension i-have-adhd`
+3. Or run: `code --install-extension obsession-ai`
 
 ## Usage
 
 - **Command Palette**: `Ctrl+Shift+P` → "I Have ADHD: Toggle"
 - **Keyboard Shortcut**: Configure in `keybindings.json`
-- **Always-On Mode**: Enable in settings `"i-have-adhd.alwaysOn": true`
+- **Always-On Mode**: Enable in settings `"obsession-ai.alwaysOn": true`
 
 ## Rules
 
@@ -38,8 +38,8 @@ Transforms AI coding assistant (Copilot, Cursor, etc.) responses to be ADHD-frie
 
 ## Settings
 
-- `i-have-adhd.alwaysOn`: Apply rules to all AI responses (default: false)
-- `i-have-adhd.showStatus`: Show status bar indicator (default: true)
+- `obsession-ai.alwaysOn`: Apply rules to all AI responses (default: false)
+- `obsession-ai.showStatus`: Show status bar indicator (default: true)
 
 ## License
 

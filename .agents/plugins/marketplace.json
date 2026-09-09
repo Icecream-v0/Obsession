@@ -1,14 +1,14 @@
 {
-  "name": "i-have-adhd",
+  "name": "obsession-ai",
   "interface": {
-    "displayName": "I Have ADHD"
+    "displayName": "OBsession AI"
   },
   "plugins": [
     {
-      "name": "i-have-adhd",
+      "name": "obsession-ai",
       "source": {
         "source": "url",
-        "url": "https://github.com/ayghri/i-have-adhd.git",
+        "url": "https://github.com/ayghri/obsession-ai.git",
         "ref": "main"
       },
       "policy": {

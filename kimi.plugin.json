@@ -1,12 +1,12 @@
 {
-  "name": "i-have-adhd",
-  "version": "1.0.0",
-  "description": "Shape output for a reader with ADHD: lead with the next action, number multi-step work, restate state across turns, suppress tangents, give specific time estimates, make wins visible.",
+  "name": "obsession-ai",
+  "version": "2.0.0",
+  "description": "Turn distraction into obsession. Hack your hyperfocus with AI coding assistance.",
   "license": "MIT",
-  "homepage": "https://github.com/ayghri/i-have-adhd",
+  "homepage": "https://github.com/ayghri/obsession-ai",
   "skills": "./skills/",
   "interface": {
-    "displayName": "I Have ADHD",
-    "shortDescription": "ADHD-friendly output shaping for Kimi Code CLI"
+    "displayName": "OBsession AI",
+    "shortDescription": "Hyperfocus mode for Kimi Code CLI"
   }
 }

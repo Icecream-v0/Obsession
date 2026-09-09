@@ -3,8 +3,8 @@ import {
   latestMarkerIsActive,
 } from "../extensions/context-compat";
 
-const ACTIVE = "i-have-adhd-rules";
-const DISABLED = "i-have-adhd-disabled";
+const ACTIVE = "obsession-ai-rules";
+const DISABLED = "obsession-ai-disabled";
 
 function assert(condition: unknown, message: string): asserts condition {
   if (!condition) {
