@@ -1,11 +1,12 @@
 <p align="center">
-  <img src="../../logo.png" alt="i-have-adhd" width="140" />
+  <img src="../../assets/obsession-logo.svg" alt="obsession-ai" width="140" />
 </p>
 <p align="center">
-  <strong align="center">ตอบได้ใจความ ไม่ยืดเยื้อ จะสมาธิสั้นหรือไม่ก็เข้าใจได้!</strong>
+  <strong align="center">เปลี่ยนการวอกแวกเป็นสมาธิขั้นสูง ไม่ต้องวินิจฉัย!</strong>
 </p>
 <p align="center">
-  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/ayghri/i-have-adhd?style=flat" alt="สัญญาอนุญาต"></a>
+  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/ayghri/obsession-ai?style=flat" alt="ใบอนุญาต"></a>
+  <a href="https://www.npmjs.com/package/obsession-ai"><img src="https://img.shields.io/npm/v/obsession-ai" alt="เวอร์ชัน npm"></a>
 </p>
 
 <p align="center">
@@ -18,82 +19,109 @@
   <strong title="ภาษาไทย" aria-label="ภาษาไทย">🇹🇭</strong>
 </p>
 
+<p align="center">
+  <img src="../../assets/hero-banner.svg" alt="Obsession-AI Banner" width="600" />
+</p>
+
 ## การติดตั้ง
 
-คัดลอกข้อความนี้ไปวางในพรอมต์ของ CLI:
+🔗 [คำแนะนำการติดตั้ง](../install/INSTALL.th.md)
 
-```text
-Install the i-have-adhd skill/plugin from https://github.com/ayghri/i-have-adhd, refer to the repo's AGENTS.md for instructions.
-```
+## คุณสมบัติ
 
-หรือ 🔗 [ดูวิธีติดตั้ง](../../INSTALL.md) (ภาษาอังกฤษ)
+ทักษะสำหรับตัวช่วยเขียนโค้ด ป้องกันไม่ให้ซ่อนคำตอบในข้อความยาวเหยียด**ลงมือทำก่อน เลขขั้นตอน เปิดโหมดสมาธิขั้นสูง**
 
-## มันทำอะไรได้บ้าง
+<p align="center">
+  <img src="../../assets/flow-diagram.svg" alt="ไดอะแกรมเวิร์กโฟลว์" width="500" />
+</p>
 
-เป็น Skill สำหรับผู้ช่วยเขียนโค้ดของคุณ ซึ่งช่วยไม่ให้คำตอบสำคัญ ๆ ถูกกลบด้วยข้อความยาว ๆ โดยจะแสดงสิ่งที่ต้องทำก่อน มีขั้นตอนและเลขกำกับ และไม่มีประโยคอย่าง “หวังว่าจะช่วยได้นะ!”
+## ตัวอย่างการเปลี่ยนแปลง
 
-## มันเปลี่ยนยังไงบ้าง
+<p align="center">
+  <img src="../../assets/before-after.svg" alt="เปรียบเทียบก่อนหลัง" width="600" />
+</p>
 
 <table>
 <tr>
 <td width="50%">
 
-## ก่อนใช้
+### ก่อน
 
-> เป็นคำถามที่ดีมาก! ขอผมคิดดูก่อนนะ ขั้นตอนการยืนยันตัวตนของคุณมีองค์ประกอบอยู่หลายส่วน ได้แก่ Middleware การตรวจสอบ Token และการจัดการ Cookie จากที่ดูไฟล์ `src/auth.ts` ฟังก์ชัน `verifyToken` (บริเวณบรรทัด 42–58) ดูเหมือนว่าจะใช้ API รุ่นเก่าของ `jsonwebtoken` วิธีหนึ่งคืออัปเดตแพ็กเกจและเขียนฟังก์ชันนั้นใหม่ หลังจากแก้ไขแล้ว คุณควรรันการทดสอบระบบยืนยันตัวตนเพื่อให้แน่ใจว่าไม่มีอะไรเสีย นอกจากนี้คุณอาจลองตรวจสอบเวอร์ชันของ Dependency ตัวอื่นด้วย หวังว่าจะช่วยได้นะ! บอกได้เลยถ้าต้องการให้ช่วยดูเพิ่มเติม
+> คำถามที่ดี! ให้ผมคิดหน่อย ไฟลว์การตรวจสอบสิทธิ์ของคุณมีหลายส่วน: middleware, การตรวจสอบโทเค็น และการจัดการ คุกกี้ หลังจากดู `src/auth.ts` ฟังก์ชัน `verifyToken` (ประมาณบรรทัด 42–58) ดูเหมือนใช้ API `jsonwebtoken` รุ่นเก่า วิธีหนึ่งคืออัปเกรดแพ็กเกจนี้และเขียนฟังก์ชันใหม่ หลังจากแก้ไขแล้ว คุณต้องรันเทสต์การตรวจสอบสิทธิ์เพื่อยืนยันว่าไม่ทำลายฟีเจอร์ใด ๆ โดยบังเอิญ ว่าแต่คุณอาจอยากตรวจสอบเวอร์ชันของ dependency ทั้งหมดด้วย หวังว่าจะช่วยได้! ถ้าต้องการให้สืบค้นเพิ่มเติม บอกผมได้เลย
 
 </td>
 
 <td width="50%">
 
-## หลังใช้
+### หลัง
 
-> รัน `npm install jsonwebtoken@latest` แล้วแก้ไขไฟล์ `src/auth.ts:42`
+> รัน `npm install jsonwebtoken@latest` แล้วแก้ไข `src/auth.ts:42`
 >
-> 1. เปิดไฟล์ `src/auth.ts`
-> 2. แทนที่ฟังก์ชัน `verifyToken` (บรรทัดที่ 42–58) ด้วยโค้ดด้านล่าง
+> 1. เปิด `src/auth.ts`
+> 2. แทนที่ `verifyToken` (บรรทัด 42–58) ด้วยโค้ดด้านล่าง
 > 3. รัน `npm test -- auth.spec.ts`
 >
-> ถัดไป: หากทดสอบไม่ผ่าน ให้นำบรรทัดแรกที่เกิดข้อผิดพลาดมาวาง
+> ขั้นตอนถัดไป: หากมีเทสต์ล้มเหลว ให้วางข้อความผิดพลาดบรรทัดแรก
 
 </td>
 </tr>
 </table>
 
-## กฎการตอบ
+## 10 กฎของโหมดสมาธิขั้นสูง
 
-มีทั้งหมด 10 ข้อ อ่านฉบับเต็มได้ใน [SKILL.md](../../skills/i-have-adhd/SKILL.md)
+มีทั้งหมด 10 กฎ ดูเนื้อหาเต็มได้ที่ [SKILL.md](../../skills/obsession-ai/SKILL.md)
 
-1. เริ่มต้นด้วยสิ่งที่ทำถัดไป
-2. ใช้หมายเลขกำกับในกรณีที่งานมีหลายขั้นตอน
-3. จบด้วยขั้นตอนถัดไปที่ชัดเจนหนึ่งอย่าง
-4. ตัดเนื้อหานอกประเด็นออก
-5. ทบทวนสถานะปัจจุบันในทุก ๆ ข้อความ
-6. ต้องระบุเวลาอย่างชัดเจน (ระบุเป็นจำนวนนาที ไม่ใช่แค่คำว่า “สักพักนะ”)
-7. ทำให้ความสำเร็จและความคืบหน้าชัดเจน
-8. อธิบายข้อผิดพลาดอย่างตรงไปตรงมา
-9. จำกัดรายการไม่เกิน 5 ข้อ
-10. ไม่มีคำนำ ไม่ต้องสรุปซ้ำ และไม่มีคำลงท้ายที่ไม่จำเป็น
+<p align="center">
+  <img src="../../assets/platform-grid.svg" alt="รองรับแพลตฟอร์ม" width="600" />
+</p>
 
-## ปรับแต่งเพิ่มเติม
+1. **บอกขั้นตอนถัดไปก่อน** - คำสั่ง/พาธ/สนิปเป็ตมาก่อน
+2. **งานหลายขั้นตอนให้ใส่เลข** - หนึ่งขั้นตอนต่อหนึ่งการกระทำ
+3. **จบด้วยขั้นตอนที่เป็นรูปธรรม** - งานที่ใช้เวลาไม่เกิน 2 นาที
+4. **ไม่วกออกนอกเรื่อง** - ทำปัญหาปัจจุบันให้เสร็จก่อน
+5. **ทบทวนสถานะทุกรอบ** - "ขั้นตอนที่ 3 จาก 5"
+6. **ประมาณเวลาให้ชัดเจน** - "15 นาที" ไม่ใช่ "เดี๋ยวเดียว"
+7. **ทำให้ผลลัพธ์มองเห็นได้** - แสดงว่าอะไรใช้งานได้ตอนนี้
+8. **ข้อผิดพลาดพูดตามความจริง** - ระบุสาเหตุและวิธีแก้ไข
+9. **รายการสูงสุด 5 ข้อ** - แบ่งเป็น "ทำตอนนี้" กับ "ทำทีหลัง"
+10. **ไม่มีคำนำ/สรุป/คำปิด** - เริ่มด้วยคำตอบ
 
-Fork โปรเจกต์นี้ และแก้ไขไฟล์ `skills/i-have-adhd/SKILL.md` จากนั้นเปลี่ยนไปใช้เวอร์ชันของคุณด้วยคำสั่งต่อไปนี้:
+## แพลตฟอร์มที่รองรับ
+
+| หมวดหมู่ | แพลตฟอร์ม |
+|------|------|
+| **ผู้ช่วย AI** | Claude Code, Cursor, Windsurf, GitHub Copilot, Codex, Pi, Qwen, Kimi, Gemini |
+| **เอดิเตอร์** | VS Code, JetBrains IDEs, Vim/Neovim, Emacs, Zed |
+| **ส่วนขยาย** | Continue.dev, Tabnine, Cody |
+
+## การปรับแต่ง
+
+Fork repository นี้ แก้ไข `skills/obsession-ai/SKILL.md` แล้วใช้สำเนาของคุณ:
 
 ```bash
-claude plugin uninstall i-have-adhd            # drop the upstream copy first:
-claude plugin marketplace remove i-have-adhd   # fork and upstream share both names
-claude plugin marketplace add <your-username>/i-have-adhd
-claude plugin install i-have-adhd@i-have-adhd
+claude plugin uninstall obsession-ai            # ลบต้นทางก่อน
+claude plugin marketplace remove obsession-ai   # Fork ใช้ชื่อเดียวกับต้นทาง
+claude plugin marketplace add <your-username>/obsession-ai
+claude plugin install obsession-ai@obsession-ai
 ```
 
-รีสตาร์ต Claude Code จากนั้นเรียกใช้ `/i-have-adhd` อีกครั้ง
+รีสตาร์ท Claude Code แล้วเรียก `/obsession-ai` อีกครั้ง
 
-## เครดิต
+## การมีส่วนร่วม
 
-สร้างขึ้นโดยอ้างอิงแนวคิดบางส่วนจากหนังสือ *The Adult ADHD Tool Kit* โดย J. Russell Ramsay และ Anthony L. Rostain และนำมาปรับแต่งให้เหมาะกับวิธีที่ LLM ควรตอบ ไม่ใช่คู่มือช่วยจัดการชีวิตประจำวันของมนุษย์
+ยินดีต้อนรับ Issue และ Pull Request! ดู [CONTRIBUTING.md](../../CONTRIBUTING.md) เพื่อเรียนรู้วิธีเข้าร่วม
 
-## สัญญาอนุญาต
+## ใบอนุญาต
 
-MIT
+ใบอนุญาต MIT
 
-กดดาว ⭐ หากมันช่วยให้คุณไม่ต้องเลื่อนผ่านคำว่า “เป็นคำถามที่ดีมาก!” อีกครั้ง
+---
+
+<p align="center">
+  <strong>หากมันช่วยลดการเลื่อนหน้าจอหนึ่งครั้ง ข้ามประโยค "คำถามที่ดี!" ได้ โปรดกด Star ⭐</strong>
+</p>
+
+<p align="center">
+  <a href="https://github.com/ayghri/obsession-ai">ดูบน GitHub</a> · 
+  <a href="https://www.npmjs.com/package/obsession-ai">ดูบน npm</a>
+</p>
