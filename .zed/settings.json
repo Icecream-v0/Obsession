@@ -1,0 +1,6 @@
+{
+  "assistant": {
+    "default_model": "claude-sonnet-4",
+    "version": "2"
+  }
+}

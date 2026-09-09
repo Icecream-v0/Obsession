@@ -1,0 +1,60 @@
+{
+  "name": "i-have-adhd",
+  "displayName": "I Have ADHD - ADHD-Friendly AI Responses",
+  "description": "Transforms AI coding assistant responses to be ADHD-friendly: action-first, numbered steps, concrete next actions, no fluff.",
+  "version": "1.0.0",
+  "publisher": "ayghri",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "AI"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "i-have-adhd.toggle",
+        "title": "Toggle ADHD-Friendly Mode",
+        "category": "I Have ADHD"
+      },
+      {
+        "command": "i-have-adhd.enable",
+        "title": "Enable ADHD-Friendly Mode",
+        "category": "I Have ADHD"
+      },
+      {
+        "command": "i-have-adhd.disable",
+        "title": "Disable ADHD-Friendly Mode",
+        "category": "I Have ADHD"
+      }
+    ],
+    "configuration": {
+      "title": "I Have ADHD",
+      "properties": {
+        "i-have-adhd.alwaysOn": {
+          "type": "boolean",
+          "default": false,
+          "description": "Always apply ADHD-friendly formatting rules to AI responses"
+        },
+        "i-have-adhd.showStatus": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show status indicator in status bar when ADHD mode is active"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ayghri/i-have-adhd.git"
+  },
+  "license": "MIT"
+}
